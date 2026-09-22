@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+
+@import "tailwindcss";
+
+:root {
+  /* Mufti Goodies Brand */
+  --color-primary: #74382e;
+  --color-secondary: #d8c5bf;
+  --color-background: #fcfcfc;
+  --color-accent: #ed9536;
+
+  /* Text */
+  --color-text: #241916;
+  --color-muted: #756965;
+  --color-light-text: #9b8d88;
+
+  /* UI */
+  --color-border: #e7ded9;
+  --color-white: #ffffff;
+
+  /* Typography */
+  --font-body: "DM Sans", sans-serif;
+  --font-heading: "Playfair Display", serif;
+
+  /* Effects */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+
+  --shadow-soft: 0 10px 40px rgba(116, 56, 46, 0.08);
+  --transition: 250ms ease;
+}
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+
+  background: var(--color-background);
+  color: var(--color-text);
+
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-body);
+  
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+  
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* margin: 0 0 28px; */
+
+  font-family: var(--font-heading);
+  font-weight: bold;
+  
+}
+
+p {
+  margin: 0;
+}

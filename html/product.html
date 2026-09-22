@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Discover Mufti Goodies products."
+    >
+
+    <title>Product | Mufti Goodies</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+<header class="header" id="header">
+
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-mark">
+                MG
+            </span>
+
+            <span class="logo-text">
+                <strong>MUFTI</strong>
+                <small>GOODIES</small>
+            </span>
+
+        </a>
+
+
+        <nav class="nav" id="nav">
+
+            <a
+                href="index.html"
+                class="nav-link"
+            >
+                Home
+            </a>
+
+            <a
+                href="our-story.html"
+                class="nav-link"
+            >
+                Our Story
+            </a>
+
+            <a
+                href="shop.html"
+                class="nav-link active"
+            >
+                Shop
+            </a>
+
+            <a
+                href="heritage.html"
+                class="nav-link"
+            >
+                Heritage
+            </a>
+
+            <a
+                href="journal.html"
+                class="nav-link"
+            >
+                Journal
+            </a>
+
+            <a
+                href="contact.html"
+                class="nav-link"
+            >
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+            <a
+                href="cart.html"
+                class="cart-button"
+            >
+
+                <span class="cart-icon">
+                    🛒
+                </span>
+
+                <span class="cart-count">
+                    0
+                </span>
+
+            </a>
+
+
+            <a
+                href="shop.html"
+                class="btn btn-primary nav-shop-btn"
+            >
+                Shop Now
+                <span>→</span>
+            </a>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="product-page">
+
+        <div class="container">
+
+            <div
+                class="breadcrumbs"
+                id="breadcrumbs"
+            >
+                <a href="index.html">
+                    Home
+                </a>
+
+                <span>→</span>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <span>→</span>
+
+                <span>Product</span>
+            </div>
+
+
+            <div
+                class="product-detail-grid"
+                id="productDetails"
+            >
+
+                <!-- JS renders product -->
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="logo footer-logo"
+                >
+
+                    <span class="logo-mark">
+                        MG
+                    </span>
+
+                    <span class="logo-text">
+                        <strong>MUFTI</strong>
+                        <small>GOODIES</small>
+                    </span>
+
+                </a>
+
+                <p>
+                    Modernizing Indigenous Foods.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#">IG</a>
+                    <a href="#">TK</a>
+                    <a href="#">FB</a>
+                    <a href="#">WA</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Explore</h4>
+
+                <a href="index.html">Home</a>
+                <a href="our-story.html">Our Story</a>
+                <a href="shop.html">Shop</a>
+                <a href="heritage.html">Heritage</a>
+                <a href="journal.html">Journal</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Customer Care</h4>
+
+                <a href="contact.html">Contact</a>
+                <a href="delivery.html">Delivery</a>
+                <a href="#">FAQs</a>
+                <a href="#">Returns & Refunds</a>
+
+            </div>
+
+
+            <div class="footer-newsletter">
+
+                <h4>Stay Connected</h4>
+
+                <p>
+                    Discover the stories behind
+                    the snacks you love.
+                </p>
+
+                <form>
+
+                    <div class="newsletter-input">
+
+                        <input
+                            type="email"
+                            placeholder="Your email address"
+                        >
+
+                        <button type="submit">
+                            →
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span id="currentYear"></span>
+                Mufti Goodies.
+                All rights reserved.
+            </p>
+
+            <p>
+                Indigenous Goodness. Reimagined.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+
+
+<script>
+
+    /* =====================================
+       GET PRODUCT FROM URL
+    ====================================== */
+
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+    const productId =
+        params.get("id");
+
+
+    const product =
+        getProductById(productId);
+
+
+    const productDetails =
+        document.getElementById(
+            "productDetails"
+        );
+
+
+    /* =====================================
+       PRODUCT NOT FOUND
+    ====================================== */
+
+    if (!product) {
+
+        productDetails.innerHTML = `
+
+            <div
+                style="
+                    grid-column: 1 / -1;
+                    text-align: center;
+                    padding: 100px 0;
+                "
+            >
+
+                <span class="section-kicker">
+                    PRODUCT NOT FOUND
+                </span>
+
+                <h1
+                    style="
+                        font-family:
+                        var(--heading-font);
+                        color:
+                        var(--primary);
+                        margin-bottom:
+                        20px;
+                    "
+                >
+                    We couldn't find that product.
+                </h1>
+
+                <a
+                    href="shop.html"
+                    class="btn btn-primary"
+                >
+                    Return to Shop
+                </a>
+
+            </div>
+
+        `;
+
+    } else {
+
+        /* ================================
+           UPDATE PAGE TITLE
+        ================================= */
+
+        document.title =
+            `${product.name} | Mufti Goodies`;
+
+
+        /* ================================
+           RENDER PRODUCT
+        ================================= */
+
+        productDetails.innerHTML = `
+
+            <div
+                class="product-detail-image"
+            >
+
+                <span>
+                    ${product.image}
+                </span>
+
+            </div>
+
+
+            <div
+                class="product-detail-content"
+            >
+
+                <span class="product-category">
+                    ${product.category}
+                </span>
+
+
+                <h1>
+                    ${product.name}
+                </h1>
+
+
+                <p
+                    class="
+                        product-detail-description
+                    "
+                >
+                    ${product.description}
+                </p>
+
+
+                <div
+                    class="
+                        product-detail-price
+                    "
+                >
+
+                    <small>
+                        Price
+                    </small>
+
+                    ${
+                        product.price > 0
+                            ? formatPrice(
+                                product.price
+                            )
+                            : "Price coming soon"
+                    }
+
+                </div>
+
+
+                <div class="product-size">
+
+                    <label>
+                        PACK SIZE
+                    </label>
+
+                    <span class="size-option">
+                        ${product.size}
+                    </span>
+
+                </div>
+
+
+                ${
+                    product.available
+
+                    ?
+
+                    `
+                    <div
+                        class="
+                            product-buy-row
+                        "
+                    >
+
+                        <div
+                            class="
+                                product-quantity
+                            "
+                        >
+
+                            <button
+                                id="decreaseQuantity"
+                                type="button"
+                            >
+                                −
+                            </button>
+
+                            <span
+                                id="productQuantity"
+                            >
+                                1
+                            </span>
+
+                            <button
+                                id="increaseQuantity"
+                                type="button"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+
+                        <button
+                            class="
+                                btn
+                                btn-primary
+                            "
+                            id="addProductButton"
+                        >
+                            Add to Cart
+                            <span>→</span>
+                        </button>
+
+                    </div>
+                    `
+
+                    :
+
+                    `
+                    <div
+                        style="
+                            padding: 16px;
+                            margin-bottom: 30px;
+                            border-radius: 10px;
+                            background:
+                                var(--soft);
+                            color:
+                                var(--primary);
+                            font-size:
+                                .75rem;
+                            font-weight:
+                                700;
+                        "
+                    >
+                        This product is currently
+                        being prepared for a future launch.
+                    </div>
+                    `
+                }
+
+
+                <div
+                    class="
+                        product-specs
+                    "
+                >
+
+                    <div class="product-spec">
+
+                        <span>
+                            INGREDIENTS
+                        </span>
+
+                        <strong>
+                            ${
+                                product.ingredients.length
+                                    ? product.ingredients.join(
+                                        ", "
+                                    )
+                                    : "Coming soon"
+                            }
+                        </strong>
+
+                    </div>
+
+
+                    <div class="product-spec">
+
+                        <span>
+                            FLAVOUR
+                        </span>
+
+                        <strong>
+                            ${product.flavour}
+                        </strong>
+
+                    </div>
+
+
+                    <div class="product-spec">
+
+                        <span>
+                            TEXTURE
+                        </span>
+
+                        <strong>
+                            ${product.texture}
+                        </strong>
+
+                    </div>
+
+
+                    <div class="product-spec">
+
+                        <span>
+                            STORAGE
+                        </span>
+
+                        <strong>
+                            ${product.storage}
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="
+                        product-info-box
+                    "
+                >
+
+                    <h3>
+                        The Product Story
+                    </h3>
+
+                    <p>
+                        ${product.story}
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="
+                    product-story-section
+                "
+                style="
+                    grid-column:
+                    1 / -1;
+                "
+            >
+
+                <span
+                    class="section-kicker"
+                >
+                    FROM HERITAGE TO TODAY
+                </span>
+
+                <h2>
+                    Every product has
+                    a story worth discovering.
+                </h2>
+
+                <p>
+                    Mufti Goodies exists to discover,
+                    develop, package and deliver quality
+                    indigenous foods through modern
+                    production, thoughtful branding,
+                    storytelling and customer experience.
+                </p>
+
+            </div>
+
+        `;
+
+
+        /* ================================
+           QUANTITY
+        ================================= */
+
+        let quantity = 1;
+
+
+        const quantityDisplay =
+            document.getElementById(
+                "productQuantity"
+            );
+
+
+        const decrease =
+            document.getElementById(
+                "decreaseQuantity"
+            );
+
+
+        const increase =
+            document.getElementById(
+                "increaseQuantity"
+            );
+
+
+        const addButton =
+            document.getElementById(
+                "addProductButton"
+            );
+
+
+        if (decrease) {
+
+            decrease.addEventListener(
+                "click",
+                () => {
+
+                    if (quantity > 1) {
+                        quantity--;
+                    }
+
+                    quantityDisplay
+                        .textContent =
+                        quantity;
+
+                }
+            );
+
+        }
+
+
+        if (increase) {
+
+            increase.addEventListener(
+                "click",
+                () => {
+
+                    quantity++;
+
+                    quantityDisplay
+                        .textContent =
+                        quantity;
+
+                }
+            );
+
+        }
+
+
+        if (addButton) {
+
+            addButton.addEventListener(
+                "click",
+                () => {
+
+                    addToCart(
+                        product.id,
+                        quantity
+                    );
+
+                }
+            );
+
+        }
+
+    }
+
+</script>
+
+</body>
+</html>

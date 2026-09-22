@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Review your Mufti Goodies order before checkout."
+    >
+
+    <title>Your Cart | Mufti Goodies</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="header">
+
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+          <img src="./assets/images/Mufti-Goodies-Logo.png" alt="Mufti_Goodies Logo" class="logo-mark" />
+
+          <!-- <span class="logo-text">
+            <strong>MUFTI</strong>
+            <small>GOODIES</small>
+          </span> -->
+        </a>
+
+
+        <nav class="nav">
+
+            <a href="index.html" class="nav-link">
+                Home
+            </a>
+
+            <a href="our-story.html" class="nav-link">
+                Our Story
+            </a>
+
+            <a href="shop.html" class="nav-link">
+                Shop
+            </a>
+
+            <a href="heritage.html" class="nav-link">
+                Heritage
+            </a>
+
+            <a href="journal.html" class="nav-link">
+                Journal
+            </a>
+
+            <a href="contact.html" class="nav-link">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+            <a
+                href="cart.html"
+                class="cart-button"
+                aria-label="Shopping cart"
+            >
+
+                <span class="cart-icon">
+                    🛒
+                </span>
+
+                <span class="cart-count">
+                    0
+                </span>
+
+            </a>
+
+
+            <a
+                href="shop.html"
+                class="btn btn-primary nav-shop-btn"
+            >
+                Shop Now
+                <span>→</span>
+            </a>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================
+     MAIN
+========================================= -->
+
+<main>
+
+    <section class="cart-page">
+
+        <div class="container">
+
+            <!-- PAGE INTRO -->
+
+            <div class="cart-page-header">
+
+                <span class="section-kicker">
+                    YOUR ORDER
+                </span>
+
+                <h1>
+                    Your <em>Cart.</em>
+                </h1>
+
+                <p>
+                    Review your selected goodies before
+                    proceeding to checkout.
+                </p>
+
+            </div>
+
+
+            <!-- CART CONTENT -->
+
+            <div
+                class="cart-page-layout"
+                id="cartPageLayout"
+            >
+
+                <!-- ITEMS -->
+
+                <div class="cart-page-items">
+
+                    <div
+                        class="cart-page-items-header"
+                    >
+
+                        <h2>
+                            Your Items
+                        </h2>
+
+                        <button
+                            type="button"
+                            id="clearCartButton"
+                            class="clear-cart-btn"
+                        >
+                            Clear Cart
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="cartPageItems"
+                        class="cart-page-list"
+                    >
+                        <!-- JS -->
+                    </div>
+
+                </div>
+
+
+                <!-- SUMMARY -->
+
+                <aside class="cart-summary">
+
+                    <span class="section-kicker">
+                        ORDER SUMMARY
+                    </span>
+
+                    <h2>
+                        Your Order
+                    </h2>
+
+
+                    <div
+                        id="cartSummaryItems"
+                        class="cart-summary-items"
+                    >
+                        <!-- JS -->
+                    </div>
+
+
+                    <div class="summary-divider"></div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Subtotal
+                        </span>
+
+                        <strong
+                            id="cartPageSubtotal"
+                        >
+                            ₦0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Delivery
+                        </span>
+
+                        <span
+                            class="summary-muted"
+                        >
+                            Calculated at checkout
+                        </span>
+
+                    </div>
+
+
+                    <div class="summary-divider"></div>
+
+
+                    <div
+                        class="
+                            summary-row
+                            summary-total
+                        "
+                    >
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong
+                            id="cartPageTotal"
+                        >
+                            ₦0
+                        </strong>
+
+                    </div>
+
+
+                    <a
+                        href="checkout.html"
+                        id="checkoutButton"
+                        class="
+                            btn
+                            btn-primary
+                            cart-checkout-button
+                        "
+                    >
+                        Proceed to Checkout
+                        <span>→</span>
+                    </a>
+
+
+                    <a
+                        href="shop.html"
+                        class="continue-shopping-link"
+                    >
+                        ← Continue Shopping
+                    </a>
+
+                </aside>
+
+            </div>
+
+
+            <!-- EMPTY CART -->
+
+            <div
+                id="emptyCart"
+                class="cart-empty-page"
+                hidden
+            >
+
+                <div class="empty-cart-icon">
+                    🛒
+                </div>
+
+                <span class="section-kicker">
+                    NOTHING HERE YET
+                </span>
+
+                <h2>
+                    Your cart is empty.
+                </h2>
+
+                <p>
+                    Discover our indigenous goodies
+                    and find something you love.
+                </p>
+
+                <a
+                    href="shop.html"
+                    class="btn btn-primary"
+                >
+                    Explore the Shop
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="logo footer-logo"
+                >
+
+                    <span class="logo-mark">
+                        MG
+                    </span>
+
+                    <span class="logo-text">
+                        <strong>MUFTI</strong>
+                        <small>GOODIES</small>
+                    </span>
+
+                </a>
+
+                <p>
+                    Modernizing Indigenous Foods.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Explore
+                </h4>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="our-story.html">
+                    Our Story
+                </a>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <a href="heritage.html">
+                    Heritage
+                </a>
+
+                <a href="journal.html">
+                    Journal
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Customer Care
+                </h4>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="delivery.html">
+                    Delivery
+                </a>
+
+                <a href="#">
+                    FAQs
+                </a>
+
+                <a href="#">
+                    Returns & Refunds
+                </a>
+
+            </div>
+
+
+            <div class="footer-newsletter">
+
+                <h4>
+                    Stay Connected
+                </h4>
+
+                <p>
+                    Discover the stories behind
+                    the snacks you love.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                ©
+                <span id="currentYear"></span>
+                Mufti Goodies.
+                All rights reserved.
+            </p>
+
+            <p>
+                Indigenous Goodness. Reimagined.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+
+
+<script>
+
+    /* =========================================
+       CART PAGE
+    ========================================= */
+
+    const cartPageItems =
+        document.getElementById(
+            "cartPageItems"
+        );
+
+    const cartSummaryItems =
+        document.getElementById(
+            "cartSummaryItems"
+        );
+
+    const cartPageSubtotal =
+        document.getElementById(
+            "cartPageSubtotal"
+        );
+
+    const cartPageTotal =
+        document.getElementById(
+            "cartPageTotal"
+        );
+
+    const emptyCart =
+        document.getElementById(
+            "emptyCart"
+        );
+
+    const cartPageLayout =
+        document.getElementById(
+            "cartPageLayout"
+        );
+
+    const clearCartButton =
+        document.getElementById(
+            "clearCartButton"
+        );
+
+
+    /* =========================================
+       RENDER CART
+    ========================================= */
+
+    function renderCartPage() {
+
+        const cart =
+            getDetailedCart();
+
+
+        /*
+         * EMPTY CART
+         */
+
+        if (cart.length === 0) {
+
+            cartPageLayout.hidden = true;
+
+            emptyCart.hidden = false;
+
+            return;
+        }
+
+
+        cartPageLayout.hidden = false;
+
+        emptyCart.hidden = true;
+
+
+        /*
+         * ITEMS
+         */
+
+        cartPageItems.innerHTML =
+            cart.map(item => {
+
+                const product =
+                    item.product;
+
+
+                const price =
+                    product.price > 0
+                        ? formatPrice(
+                            product.price
+                        )
+                        : "Price coming soon";
+
+
+                const itemTotal =
+                    product.price > 0
+                        ? formatPrice(
+                            product.price *
+                            item.quantity
+                        )
+                        : price;
+
+
+                return `
+
+                    <article
+                        class="cart-page-item"
+                    >
+
+                        <div
+                            class="
+                                cart-page-item-image
+                            "
+                        >
+                            ${product.image}
+                        </div>
+
+
+                        <div
+                            class="
+                                cart-page-item-info
+                            "
+                        >
+
+                            <span
+                                class="
+                                    cart-page-category
+                                "
+                            >
+                                ${product.category}
+                            </span>
+
+                            <h3>
+                                ${product.name}
+                            </h3>
+
+                            <small>
+                                Pack:
+                                ${product.size}
+                            </small>
+
+
+                            <div
+                                class="
+                                    cart-page-item-bottom
+                                "
+                            >
+
+                                <strong>
+                                    ${itemTotal}
+                                </strong>
+
+
+                                <div
+                                    class="
+                                        cart-page-quantity
+                                    "
+                                >
+
+                                    <button
+                                        type="button"
+                                        onclick="
+                                            decreaseCartQuantity(
+                                                '${product.id}'
+                                            );
+                                            renderCartPage();
+                                        "
+                                    >
+                                        −
+                                    </button>
+
+                                    <span>
+                                        ${item.quantity}
+                                    </span>
+
+                                    <button
+                                        type="button"
+                                        onclick="
+                                            increaseCartQuantity(
+                                                '${product.id}'
+                                            );
+                                            renderCartPage();
+                                        "
+                                    >
+                                        +
+                                    </button>
+
+                                </div>
+
+
+                                <button
+                                    type="button"
+                                    class="
+                                        cart-page-remove
+                                    "
+                                    onclick="
+                                        removeFromCart(
+                                            '${product.id}'
+                                        );
+                                        renderCartPage();
+                                    "
+                                >
+                                    Remove
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                `;
+
+            })
+            .join("");
+
+
+        /*
+         * SUMMARY ITEMS
+         */
+
+        cartSummaryItems.innerHTML =
+            cart.map(item => {
+
+                const product =
+                    item.product;
+
+
+                const itemTotal =
+                    product.price > 0
+                        ? formatPrice(
+                            product.price *
+                            item.quantity
+                        )
+                        : "Coming soon";
+
+
+                return `
+
+                    <div
+                        class="summary-item"
+                    >
+
+                        <span>
+                            ${product.name}
+                            × ${item.quantity}
+                        </span>
+
+                        <strong>
+                            ${itemTotal}
+                        </strong>
+
+                    </div>
+
+                `;
+
+            })
+            .join("");
+
+
+        /*
+         * TOTAL
+         */
+
+        const total =
+            getCartTotal();
+
+
+        const formattedTotal =
+            total > 0
+                ? formatPrice(total)
+                : "Price coming soon";
+
+
+        cartPageSubtotal.textContent =
+            formattedTotal;
+
+
+        cartPageTotal.textContent =
+            formattedTotal;
+
+    }
+
+
+    /* =========================================
+       CLEAR CART
+    ========================================= */
+
+    clearCartButton.addEventListener(
+        "click",
+        () => {
+
+            const cart =
+                getCart();
+
+
+            if (cart.length === 0) {
+                return;
+            }
+
+
+            const confirmed =
+                window.confirm(
+                    "Are you sure you want to clear your cart?"
+                );
+
+
+            if (!confirmed) {
+                return;
+            }
+
+
+            clearCart();
+
+            renderCartPage();
+
+        }
+    );
+
+
+    /* =========================================
+       UPDATE WHEN STORAGE CHANGES
+    ========================================= */
+
+    window.addEventListener(
+        "storage",
+        renderCartPage
+    );
+
+
+    /* =========================================
+       INITIALIZE
+    ========================================= */
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        renderCartPage
+    );
+
+</script>
+
+</body>
+</html>
