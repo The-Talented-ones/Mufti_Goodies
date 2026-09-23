@@ -34,6 +34,10 @@ export default function Navbar() {
       path: "/delivery",
     },
     {
+      label: "Journal",
+      path: "/journal",
+    },
+    {
       label: "Contact",
       path: "/contact",
     },

@@ -1,6 +1,4 @@
 // Footer.tsx
-import { useState } from "react";
-import type { FormEvent, ReactNode } from "react";
 import { Link } from "react-router-dom";
 import {
   FiFacebook,
@@ -13,7 +11,7 @@ import {
 } from "react-icons/fi";
 import { FaTiktok, FaWhatsapp  } from "react-icons/fa6";
 
-import Container from "../common/Container";
+import Container from "../../components/common/Container";
 import Mufti_logo from "../../assets/Mufti-Goodies-Logo.png";
 
 /* =====================================================
@@ -71,17 +69,7 @@ const socials = [
 ====================================================== */
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubscribe = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (!email) return;
-    // TODO: wire up to your newsletter provider
-    setSubscribed(true);
-    setEmail("");
-    setTimeout(() => setSubscribed(false), 4000);
-  };
+  
 
   const scrollTop = () =>
     window.scrollTo({ top: 0, behavior: "smooth" });

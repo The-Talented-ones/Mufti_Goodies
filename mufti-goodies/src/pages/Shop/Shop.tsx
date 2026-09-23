@@ -47,7 +47,7 @@ const products: Product[] = [
     tagline: "A modern expression of Dodo Ikire.",
     category: "Plantain",
     region: "Ikire, Osun State",
-    price: 3500,
+    price: 1500,
     sizes: ["100g", "200g", "500g"],
     status: "available",
     image: "/images/products/Dodo_Story2.webp",
