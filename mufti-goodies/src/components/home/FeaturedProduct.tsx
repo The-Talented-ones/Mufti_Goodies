@@ -2,7 +2,7 @@ import {
   FiArrowUpRight,
   FiCheck,
 } from "react-icons/fi";
-import DodoStory from "../../assets/How To Make Dodo Ikire.jpg"
+import DodoStory from "/public/images/heritage/Dodo_Story2.webp"
 import Container from "../common/Container";
 import Button from "../common/Button";
 import SectionHeading from "../common/SectionHeading";

@@ -5,9 +5,10 @@ import {
   FiShoppingBag,
   FiX,
 } from "react-icons/fi";
-import Mufti_logo from "../../assets/Mufti-Goodies-Logo.png"
+import Mufti_logo from "/public/images/brand/Mufti-Goodies-Logo.png"
 import Container from "../common/Container";
 import Button from "../common/Button";
+import CartIcon from "../cart/CartIcon";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -86,19 +87,20 @@ export default function Navbar() {
 
           {/* Desktop actions */}
           <div className="hidden items-center gap-3 lg:flex">
-
-            <Link
+            
+               <Link
               to="/cart"
               aria-label="Shopping cart"
               className="relative flex h-11 w-11 items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-primary)] transition hover:bg-[var(--color-secondary)]"
             >
-              <FiShoppingBag size={20} />
+              <CartIcon/>
 
               {/* Cart count will be connected to Zustand later */}
               <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-[var(--color-accent)] text-[10px] font-bold text-white">
                 0
               </span>
-            </Link>
+            </Link>  
+            {/* <CartIcon/> */}
 
             <Button to="/shop">
               Shop Now

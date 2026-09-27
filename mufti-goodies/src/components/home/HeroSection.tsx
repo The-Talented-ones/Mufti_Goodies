@@ -2,7 +2,7 @@ import { FiArrowRight } from "react-icons/fi";
 
 import Container from "../common/Container";
 import Button from "../common/Button";
-import DodoVisual from "../../assets/DodoVisual.jpg";
+import DodoVisual from "/public/images/products/DodoVisual.jpg"
 
 export default function HeroSection() {
   return (

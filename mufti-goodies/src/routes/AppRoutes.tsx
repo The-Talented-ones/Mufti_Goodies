@@ -6,6 +6,11 @@ import Shop from "../pages/Shop/Shop";
 import Heritage from "../pages/Heritage/Heritage";
 import Journal from "../pages/Journal/Journal";
 import JournalPost from "../pages/Journal/JournalPost";
+import Contact from "../pages/Contact/Contact";
+import Delivery from "../pages/Delivery/Delivery";
+import ProductDetail from "../pages/Product/ProductDetail";
+import Cart from "../pages/Cart/Cart";
+import Checkout from "../pages/Checkout/Checkout";
 
 function PlaceholderPage({ title }: { title: string }) {
   return (
@@ -23,16 +28,17 @@ export default function AppRoutes() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/shop" element={<Shop />} />
+      <Route path="/shop/:slug" element={<ProductDetail />} />
       <Route path="/product" element={<PlaceholderPage title="Product" />} />
-      <Route path="/cart" element={<PlaceholderPage title="Cart" />} />
-      <Route path="/checkout" element={<PlaceholderPage title="Checkout" />} />
+      <Route path="/cart" element={<Cart/>} />
+      <Route path="/checkout" element={<Checkout/>} />
       <Route path="/heritage" element={<Heritage />} />
       <Route path="/journal" element={<Journal/>} />
       <Route path="/journal/:slug" element={<JournalPost />} />
       <Route path="/our-story" element={<OurStory />} />
-      <Route path="/delivery" element={<PlaceholderPage title="Delivery" />} />
+      <Route path="/delivery" element={<Delivery />} />
       <Route path="/dodo-ikire" element={<PlaceholderPage title="Dodo Ikire" />} />
-      <Route path="/contact" element={<PlaceholderPage title="Contact" />} />
+      <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );

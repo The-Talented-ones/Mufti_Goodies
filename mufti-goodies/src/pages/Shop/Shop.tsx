@@ -1,4 +1,4 @@
-// Shop.tsx
+// src/pages/Shop.tsx
 import { useMemo, useState } from "react";
 import type { ReactNode } from "react";
 import {
@@ -13,95 +13,16 @@ import {
 } from "react-icons/fi";
 import { GiPlantRoots, GiWheat, GiPeanut } from "react-icons/gi";
 
-import Container from "../../components//common/Container";
+import Container from "../../components/common/Container";
 import Button from "../../components/common/Button";
 import SectionHeading from "../../components/common/SectionHeading";
 
-/* =====================================================
-   PRODUCT DATA
-   Phase 1: Dodocious Dodo only.
-====================================================== */
-
-interface Product {
-  id: string;
-  slug: string;
-  name: string;
-  tagline: string;
-  category: "Plantain" | "Groundnut" | "Maize" | "Coming Soon";
-  region: string;
-  price: number;
-  sizes: string[];
-  status: "available" | "coming-soon";
-  image: string;                 // path to product image
-  imageAlt: string;              // descriptive alt text for SEO + a11y
-  /** Fallback icon used if image is missing / coming-soon */
-  fallbackIcon?: ReactNode;
-  accent: string;                // gradient behind the image (fallback + hover wash)
-}
-
-const products: Product[] = [
-  {
-    id: "dodocious-dodo",
-    slug: "/shop/dodocious-dodo",
-    name: "Dodocious Dodo",
-    tagline: "A modern expression of Dodo Ikire.",
-    category: "Plantain",
-    region: "Ikire, Osun State",
-    price: 1500,
-    sizes: ["100g", "200g", "500g"],
-    status: "available",
-    image: "/images/products/Dodo_Story2.webp",
-    imageAlt:
-      "Dodocious Dodo — a modern Dodo Ikire plantain snack from Ikire, Osun State, Nigeria",
-    accent:
-      "from-[#f5b45c] via-[var(--color-accent,#ED9536)] to-[var(--color-primary,#74382E)]",
-  },
-  {
-    id: "kulicious-kuli",
-    slug: "/shop/kulicious-kuli",
-    name: "Kulicious Kuli",
-    tagline: "Crunchy, spiced groundnut goodness.",
-    category: "Groundnut",
-    region: "Northern Nigeria",
-    price: 0,
-    sizes: [],
-    status: "coming-soon",
-    image: "/images/products/kuliciousKuli.jpg",
-    imageAlt:
-      "Kulicious Kuli — a crunchy Nigerian groundnut snack inspired by Kuli-Kuli",
-    fallbackIcon: <GiPeanut size={96} />,
-    accent: "from-[#e9c46a] via-[#d4a24a] to-[#8a5a2b]",
-  },
-  {
-    id: "kokoro",
-    slug: "/shop/kokoro",
-    name: "Kokoro",
-    tagline: "The classic Nigerian maize snack.",
-    category: "Maize",
-    region: "Pan-Nigerian",
-    price: 0,
-    sizes: [],
-    status: "coming-soon",
-    image: "/images/products/kokoro.jpg",
-    imageAlt:
-      "Kokoro — a classic Nigerian maize snack with deep cultural roots",
-    fallbackIcon: <GiWheat size={96} />,
-    accent: "from-[#f4d06f] via-[#e0a83f] to-[#9c6b1c]",
-  },
-];
-
-/* =====================================================
-   FILTERS
-====================================================== */
-
-const categories = [
-  "All",
-  "Plantain",
-  "Groundnut",
-  "Maize",
-  "Coming Soon",
-] as const;
-type Category = (typeof categories)[number];
+import {
+  products,
+  productCategories as categories,
+  type ProductCategoryFilter as Category,
+} from "../../data/products";
+import type { Product } from "../../types/product";
 
 /* =====================================================
    SHOP PAGE
@@ -554,6 +475,18 @@ interface ProductCardProps {
 function ProductCard({ product }: ProductCardProps) {
   const isComingSoon = product.status === "coming-soon";
 
+  /* Derive sizes string from variants (or fallback to empty) */
+  const sizesLabel =
+    product.variants && product.variants.length > 0
+      ? product.variants.map((v) => v.size).join(" · ")
+      : "";
+
+  /* Use variant price if available, otherwise base price */
+  const displayPrice =
+    product.variants && product.variants.length > 0
+      ? product.variants[0].price
+      : product.price;
+
   return (
     <article
       className="group relative flex h-full flex-col overflow-hidden rounded-3xl
@@ -650,14 +583,14 @@ function ProductCard({ product }: ProductCardProps) {
                 From
               </p>
               <p className="font-serif text-xl font-semibold text-[var(--color-primary,#74382E)]">
-                ₦{product.price.toLocaleString()}
+                ₦{displayPrice.toLocaleString()}
               </p>
             </div>
           )}
 
-          {!isComingSoon && (
+          {!isComingSoon && sizesLabel && (
             <span className="text-xs text-[var(--color-muted,#756A66)]">
-              {product.sizes.join(" · ")}
+              {sizesLabel}
             </span>
           )}
         </div>

@@ -12,7 +12,7 @@ import {
 import { FaTiktok, FaWhatsapp  } from "react-icons/fa6";
 
 import Container from "../../components/common/Container";
-import Mufti_logo from "../../assets/Mufti-Goodies-Logo.png";
+import Mufti_logo from "/public/images/brand/Mufti-Goodies-Logo.png";
 
 /* =====================================================
    NAV DATA
