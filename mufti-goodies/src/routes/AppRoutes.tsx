@@ -4,6 +4,8 @@ import Home from "../pages/Home/Home";
 import OurStory from "../pages/OurStory/OurStory";
 import Shop from "../pages/Shop/Shop";
 import Heritage from "../pages/Heritage/Heritage";
+import Journal from "../pages/Journal/Journal";
+import JournalPost from "../pages/Journal/JournalPost";
 
 function PlaceholderPage({ title }: { title: string }) {
   return (
@@ -25,7 +27,8 @@ export default function AppRoutes() {
       <Route path="/cart" element={<PlaceholderPage title="Cart" />} />
       <Route path="/checkout" element={<PlaceholderPage title="Checkout" />} />
       <Route path="/heritage" element={<Heritage />} />
-      <Route path="/journal" element={<PlaceholderPage title="Journal" />} />
+      <Route path="/journal" element={<Journal/>} />
+      <Route path="/journal/:slug" element={<JournalPost />} />
       <Route path="/our-story" element={<OurStory />} />
       <Route path="/delivery" element={<PlaceholderPage title="Delivery" />} />
       <Route path="/dodo-ikire" element={<PlaceholderPage title="Dodo Ikire" />} />
