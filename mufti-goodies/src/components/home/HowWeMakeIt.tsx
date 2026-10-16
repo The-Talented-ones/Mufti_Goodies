@@ -79,7 +79,8 @@ export default function HowWeMakeIt() {
         <div className="mx-auto max-w-2xl text-center">
           <SectionHeading
             eyebrow="Our Approach"
-            title="How we make it."
+            title={
+              <div className="-">How we make it. </div>}
             description="We want customers to see the structure, care and professionalism behind the products they enjoy."
           />
         </div>

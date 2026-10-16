@@ -50,12 +50,12 @@ export default function WhyMuftiGoodies() {
         <SectionHeading
           eyebrow="Why Mufti Goodies"
           title={
-            <>
+            <div className="">
               More than just <span className="text-[var(--color-accent)] italic">a Snack</span>
-            </>
+            </div>
           }
           description="We are building a modern experience around the foods, stories and traditions that deserve to be remembered."
-          centered
+         
         />
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
